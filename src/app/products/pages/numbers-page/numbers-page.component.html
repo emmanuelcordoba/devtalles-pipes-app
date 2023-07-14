@@ -1,0 +1,21 @@
+<p-panel header="Pipes Básicos">
+  <p>Pipes numericos</p>
+</p-panel>
+
+<div class="grid mt-2">
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Netas" subheader="del presente año">
+      {{ totalSells  | number:'1.2-2' }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Brutas" subheader="del presente año">
+      {{ totalSells + 65412  | currency:'ARS':'symbol-narrow':'1.4-4' }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Ganancia porcentual" subheader="del presente año">
+      {{ percent  | percent:'1.2-2' }}
+    </p-card>
+  </div>
+</div>
